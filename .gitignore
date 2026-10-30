@@ -1,0 +1,37 @@
+# Python build and test outputs
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+
+# Local secrets and environment files
+.env
+.env.*
+!.env.example
+GEMINI_API_KEY
+
+# Local source data may need to be downloaded from Kaggle separately
+data/whats-cooking/*.json
+
+# Large generated tensors and prediction archives exceed common Git hosting limits
+artifacts/gemini-embedding-001.npz
+artifacts/**/predictions.npz
+artifacts/**/*.partial.npy
+artifacts/**/*.done.npy
+
+# Local LaTeX build and visual QA outputs
+report/*.aux
+report/*.fdb_latexmk
+report/*.fls
+report/*.log
+report/*.out
+report/*.xdv
+report/render/
+report/midterm-render/
+poster/*.aux
+poster/*.log
+poster/*.out
+poster/render/
+
+# Jupyter-generated temporary state
+.ipynb_checkpoints/
